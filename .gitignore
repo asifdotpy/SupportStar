@@ -24,3 +24,7 @@ local_settings.py
 
 # Ignore static files
 static/
+
+# Ignore virtual environments for microservices using a regular expression pattern
+*_env/
+
