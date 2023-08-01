@@ -1,1 +1,0 @@
-frontend/app/manage.py
