@@ -1,34 +1,24 @@
 version: "3.1"
 
 stories:
-- story: order food
+- story: greet and goodbye
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: order_food
-  - action: utter_ask_food
-  - intent: inform
-    entities:
-      - food: pizza
-  - slot_was_set:
-      - food: pizza
-  - action: utter_ask_size
-  - intent: inform
-    entities:
-      - size: large
-  - slot_was_set:
-      - size: large
-  - action: utter_ask_toppings
-  - intent: inform
-    entities:
-      - topping: pepperoni
-      - topping: mushrooms
-  - slot_was_set:
-      - topping:
-        - pepperoni
-        - mushrooms
-  - action: utter_confirm_order
-  - intent: affirm
-  - action: utter_place_order
+  - intent: goodbye
+  - action: utter_goodbye
 
+- story: greet and affirm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_affirm
+
+- story: greet and about_me
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_me
+  - action: utter_about_me
 

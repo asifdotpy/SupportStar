@@ -3,42 +3,30 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - Hi there!
-    - Hello!
-    - Hey, how's it going?
-
-- intent: order_food
-  examples: |
-    - I'd like to order some food, please.
-    - Can I get something to eat?
-    - I'm hungry, can I order some food?
-
-- intent: inform
-  examples: |
-    - pizza
-    - burger
-    - fries
-    - coke
-    - pepperoni
-    - mushrooms
-    - large
-    - small
-
-- intent: affirm
-  examples: |
-    - Yes, please.
-    - That sounds good.
-    - Sure, go ahead.
-
-- intent: deny
-  examples: |
-    - No, thanks.
-    - I changed my mind.
-    - Actually, never mind.
+    - Hi
+    - Hello
+    - Hey there
+    - Good morning
+    - Good evening
 
 - intent: goodbye
   examples: |
-    - Bye!
-    - See you later!
-    - Thanks, bye!
+    - Bye
+    - Goodbye
+    - See you later
+    - Take care
+
+- intent: affirm
+  examples: |
+    - Yes
+    - Yeah
+    - Yup
+    - Sure
+    - Of course
+
+- intent: about_me
+  examples: |
+    - Tell me about yourself
+    - Who are you?
+    - What do you do?
 
