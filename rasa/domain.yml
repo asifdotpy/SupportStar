@@ -2,33 +2,54 @@ version: "3.1"
 
 intents:
   - greet
-  - goodbye
+  - order_food
+  - inform
   - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+
+entities:
+  - food
+  - size
+  - topping
+
+slots:
+  food:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: food
+  size:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: size
+  topping:
+    type: list
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: topping
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+    - text: "Hello! How can I help you?"
+  utter_ask_food:
+    - text: "What would you like to eat?"
+  utter_ask_size:
+    - text: "What size would you like?"
+  utter_ask_toppings:
+    - text: "What toppings would you like?"
+  utter_confirm_order:
+    - text: "Okay, I've got a {size} {food} with {topping} for you. Is that correct?"
+  utter_place_order:
+    - text: "Great, I've placed your order. Is there anything else you'd like?"
   utter_goodbye:
-  - text: "Bye"
-
+    - text: "Goodbye! Have a nice day."
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "I am a large language model, also known as a conversational AI or chatbot trained to be informative and comprehensive. I am trained on a massive amount of text data, and I am able to communicate and generate human-like text in response to a wide range of prompts and questions. For example, I can provide summaries of factual topics or create stories."
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
