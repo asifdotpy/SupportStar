@@ -1,24 +1,15 @@
+---
 version: "3.1"
-
 stories:
-- story: greet and goodbye
-  steps:
+  - story: successful booking
+steps:
   - intent: greet
   - action: utter_greet
-  - intent: goodbye
-  - action: utter_goodbye
-
-- story: greet and affirm
-  steps:
-  - intent: greet
-  - action: utter_greet
+  - intent: book_room
+  - action: hotel_form
+  - active_loop: hotel_form
+  - active_loop: null
+  - action: utter_confirm_booking
   - intent: affirm
-  - action: utter_affirm
-
-- story: greet and about_me
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: about_me
-  - action: utter_about_me
+  - action: utter_thank_you
 

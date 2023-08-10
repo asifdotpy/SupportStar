@@ -1,9 +1,10 @@
+---
 version: "3.1"
-
 rules:
-
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: cancel booking
+steps:
+  - intent: cancel_booking
+  - action: utter_ask_reason
+  - intent: inform
+  - action: utter_cancel_booking
 
