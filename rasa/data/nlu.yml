@@ -1,43 +1,91 @@
 version: "3.1"
 
 nlu:
-
 - intent: greet
   examples: |
-    - Hi
-    - Hello
-    - Hey
-    - Good day
-    - Good morning
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
 
-- intent: book_room
+- intent: goodbye
   examples: |
-    - I want to book a room in Paris for two nights [location=Paris] [duration=two nights]
-    - Can I reserve a double room in New York on July 4th? [room_type=double] [location=New York] [date=July 4th]
-    - I need a single room in Tokyo for three days [room_type=single] [location=Tokyo] [duration=three days]
-
-- intent: request_price
-  examples: |
-    - How much is a single room in New York on July 4th? [room_type=single] [location=New York] [date=July 4th]
-    - What is the price of a double room in Paris for one night? [room_type=double] [location=Paris] [duration=one night]
-    - Tell me the cost of a triple room in Tokyo for two days [room_type=triple] [location=Tokyo] [duration=two days]
-
-- intent: cancel_booking
-  examples: |
-    - Cancel my reservation please
-    - I want to cancel my booking
-    - I don't need the room anymore
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
 
 - intent: affirm
   examples: |
-    - Yes
-    - Sure
-    - Of course
-    - Absolutely
-    - OK
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
 
-- intent: inform
+- intent: deny
   examples: |
-    - I changed my mind
-    - I found a better deal
-    - I have an emergency
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

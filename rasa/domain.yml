@@ -2,91 +2,33 @@ version: "3.1"
 
 intents:
   - greet
-  - book_room
-  - request_price
-  - cancel_booking
+  - goodbye
   - affirm
-  - inform
-
-entities:
-  - location
-  - date
-  - duration
-  - room_type
-  - number_of_guests
-
-slots:
-  location:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: location
-  date:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: date
-  duration:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: duration
-  room_type:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: room_type
-  number_of_guests:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: number_of_guests
-
-actions:
-  - utter_greet
-  - utter_ask_location
-  - utter_ask_date
-  - utter_ask_duration
-  - utter_ask_room_type
-  - utter_ask_number_of_guests
-  - utter_confirm_booking
-  - utter_ask_reason
-  - utter_cancel_booking
-  - utter_thank_you
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
 
 responses:
   utter_greet:
-    - text: "Hello, welcome to Hotel Bot. How can I help you?"
-  utter_ask_location:
-    - text: "Where do you want to book a room?"
-  utter_ask_date:
-    - text: "When do you want to check in?"
-  utter_ask_duration:
-    - text: "How long do you want to stay?"
-  utter_ask_room_type:
-    - text: "What type of room do you prefer?"
-  utter_ask_number_of_guests:
-    - text: "How many guests are you booking for?"
-  utter_confirm_booking:
-    - text: "Your booking is confirmed. You have booked a {room_type} room in {location} for {number_of_guests} guests from {date} for {duration}."
-  utter_ask_reason:
-    - text: "Why do you want to cancel your booking?"
-  utter_cancel_booking:
-    - text: "Your booking is canceled. We are sorry to see you go."
-  utter_thank_you:
-    - text: "Thank you for choosing Hotel Bot. Have a nice day."
+  - text: "Hey! How are you?"
 
-forms:
-  hotel_form:
-    required_slots:
-      - location
-      - date
-      - duration
-      - room_type
-      - number_of_guests
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
 
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
